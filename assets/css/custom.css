@@ -1,0 +1,16 @@
+#header, #header.alt {
+  background-color: #ffffff; /* Imposta lo sfondo su bianco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
+  height: auto !important;
+}
+
+#nav .special,
+#nav .special a,
+#header nav > ul > li > a.menuToggle::after {
+  color: #2e3842;
+  fill: #2e3842;
+}
+
+#header nav > ul > li > a.menuToggle::after {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(35%) saturate(300%) hue-rotate(168deg) brightness(91%) contrast(94%);
+}
