@@ -1,6 +1,15 @@
+#main > header {
+  background-color: #ffffff !important;
+  background-image: url("../../images/banner.jpg");
+}
+
+#nav{
+  top: 0.8em !important;
+}
+
 #header, #header.alt {
-  background-color: #ffffff; /* Imposta lo sfondo su bianco */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: auto !important;
 }
 
@@ -13,4 +22,42 @@
 
 #header nav > ul > li > a.menuToggle::after {
   filter: brightness(0) saturate(100%) invert(20%) sepia(35%) saturate(300%) hue-rotate(168deg) brightness(91%) contrast(94%);
+}
+
+.wrapper.style1 {
+  background-color: #1972ba;
+  color: #89a5d5;
+}
+
+.icon.style1, .icon.style2, .icon.style3 {
+  color: white;
+}
+
+.mainLogo{
+  max-width: 200px;
+  max-height: 100px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:15px;
+  margin-bottom:15px;
+  display: block;
+}
+
+.mainPhoto{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainPhotoContainer{
+  width: 300px;
+  height: 300px;
+  margin:auto;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }

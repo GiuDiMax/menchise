@@ -1,2 +1,45 @@
 @media screen and (max-width: 480px) {
+  .scrolly{
+    display:none;
+  }
+  .logo-container {
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .menuToggle{
+    margin-top: 0.8em;
+  }
+  .logo-container > a {
+    height: 100%;
+  }
+
+  .logo-container > a > .mainLogo {
+    height: 100%;
+    width: auto;
+    max-height: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mainPhotoContainer{
+    width: auto;
+    height: 30vh;
+    aspect-ratio: 1;
+    margin:auto;
+    margin-bottom: 4em;
+    margin-top: 2em;
+  }
+  #banner{
+    height: 100vh;
+  }
+
+  .forceMobile{
+    display: unset !important;
+  }
+
 }
