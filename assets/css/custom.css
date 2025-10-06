@@ -61,3 +61,11 @@
   justify-content: center;
   overflow: hidden;
 }
+
+.servizipage .spotlight{
+  background-color: #145080 !important;
+}
+
+.servizipage .spotlight .image{
+  width: 30%;
+}

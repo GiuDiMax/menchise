@@ -42,4 +42,13 @@
     display: unset !important;
   }
 
+  .servizipage .spotlight .image{
+    width: 100%;
+  }
+
+  .titoloServizi{
+    margin-top: 5em;
+  }
+
+
 }
