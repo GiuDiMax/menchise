@@ -41,6 +41,10 @@
   .forceMobile{
     display: unset !important;
   }
+  .hideMobile{
+    display: none !important;
+  }
+
 
   .servizipage .spotlight .image{
     width: 100%;
@@ -48,6 +52,22 @@
 
   .titoloServizi{
     margin-top: 5em;
+  }
+
+  .staffimage{
+    width: 100% !important;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+  }
+  .staffimage img{
+    width: 90% !important;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  #image-carousel{
+    width: 100%;
   }
 
 

@@ -25,8 +25,8 @@
 }
 
 .wrapper.style1 {
-  background-color: #1972ba;
-  color: #89a5d5;
+  background-color: #799cd1;
+  color: white;
 }
 
 .icon.style1, .icon.style2, .icon.style3 {
@@ -62,12 +62,37 @@
   overflow: hidden;
 }
 
-.servizipage .spotlight{
-  background-color: #145080 !important;
+/*.servizipage .spotlight{
+  background-color: #046fb6 !important;
+  box-shadow:
+    inset 0 25px 25px 8px rgba(2, 67, 109, 0.5);
+}*/
+
+.servizipage .spotlight:nth-child(odd) {
+  background-color: #046fb6 !important;
+  color: #b9c7e8;
 }
 
-.servizipage .spotlight .image{
-  width: 30%;
+.servizipage .spotlight:nth-child(even), .servizipage .spotlight:nth-child(even) h2{
+  background-color: #b9c7e8 !important;
+  color: #046fb6;
+}
+
+
+.servizipage .spotlight .image {
+  width: 40%;
+  height: 30em;
+}
+
+.servizipage .spotlight .content {
+  width: 70%;
+  max-width: unset !important;
+}
+
+.servizipage .spotlight .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 input[type="submit"].primary,
@@ -105,4 +130,20 @@ body.landing #footer {
 .copyright{
   padding: 0 !important;
   margin: 0 !important;
+}
+
+#menu{
+  background-color: #799cd1 !important;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#image-carousel{
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
 }

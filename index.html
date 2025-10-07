@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/custom.css?v=1.1" />
   <link rel="stylesheet" href="assets/css/mobile.css?v=1.1" />
+  <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+  <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
@@ -14,7 +16,7 @@
 <body class="landing is-preload">
 <div id="page-wrapper">
   <div id="header-container"></div>
-  <section id="banner">
+  <section id="banner" style="background-color: #046fb6; background-image: unset !important;">
     <div class="inner">
       <div class="mainPhotoContainer">
         <img src="/images/main/1687983488158.jpeg" alt="dottor menchise" class="mainPhoto">
@@ -37,9 +39,27 @@
       </header>
     </div>
   </section>
+  <section id="carousel" class="wrapper special" style="background-color:#046fb6; padding-top:2em;">
+    <h2 style="font-size: 1em; border-color: white;margin-bottom:2em;">Il nostro studio</h2>
+    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="images/main/DSC_8507.jpeg" alt="">
+          </li>
+          <li class="splide__slide">
+            <img src="images/main/Sala Arancio.jpeg" alt="">
+          </li>
+          <li class="splide__slide">
+            <img src="images/main/Sala celeste.jpeg" alt="">
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
   <section id="three" class="wrapper alt style2">
-    <section class="spotlight" style="background-color: #1d72b7;">
-      <div class="image"><img src="images/main/Sala celeste.jpeg" alt="" /></div>
+    <section class="spotlight" style="background-color: #799cd1;">
+      <div class="image hideMobile"><img src="images/main/Sala celeste.jpeg" alt="" /></div>
       <div class="content">
         <h2>I nostri servizi</h2>
         <ul>
@@ -57,7 +77,7 @@
       </div>
     </section>
   </section>
-  <section id="four" class="wrapper style3 special" style="background-color:#145080;">
+  <section id="four" class="wrapper style3 special" style="background-color:#046fb6;">
     <div class="inner">
       <header class="major">
         <h2>Casi Clinici</h2>
@@ -65,12 +85,16 @@
       </header>
       <ul class="features">
         <li class="icon solid fa-tooth">
-          <h3>Impianti Dentali</h3>
-          <p style="display:none">Lorem ipsum.</p>
+          <a href="/impiantidentali">
+            <h3>Impianti Dentali</h3>
+            <p style="display:none">Lorem ipsum.</p>
+          </a>
         </li>
         <li class="icon solid fa-teeth">
-          <h3>Intarsi</h3>
-          <p style="display:none">Lorem ipsum.</p>
+          <a href="/intarsi">
+            <h3>Intarsi</h3>
+            <p style="display:none">Lorem ipsum.</p>
+          </a>
         </li>
         <li class="icon solid fa-clone">
           <h3>Altro Caso</h3>
@@ -79,19 +103,19 @@
       </ul>
     </div>
   </section>
-  <section id="cta" class="wrapper style4">
+  <section id="cta" class="wrapper style4" style="background-color: #799cd1; background-image: unset !important;">
     <div class="inner">
       <header>
         <h2>Contattaci</h2>
         <p>Vienici a trovare nella nostra sede di Via Nicolai</p>
       </header>
       <ul class="actions stacked">
-        <li><a href="tel:0805210939" class="button fit primary">Chiamaci</a></li>
+        <li><a href="tel:0805210939" class="button fit secondary">Chiamaci</a></li>
         <li><a href="mailto:info@studiomenchise.it" class="button fit">Scrivici</a></li>
       </ul>
     </div>
-    <div style="margin-left:auto; margin-right:auto; width: 50%; margin-top: 2em;">
-      <img src="images/telegram/6028399097641289176.jpg" alt="staff" style="margin-left:auto; margin-right:auto; width: 100%;"/>
+    <div class="staffimage" style="margin-left:auto; margin-right:auto; width: 50%; margin-top: 2em;">
+      <img src="images/telegram/6028399097641289176.jpg" alt="staff" style="margin-left:auto; margin-right:auto; width: 100%; height: auto;"/>
     </div>
   </section>
   <div id="footer-container"></div>
@@ -105,6 +129,12 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+  new Splide( '#image-carousel', {
+    type   : 'loop',
+  }).mount();
+</script>
 
 </body>
 </html>
