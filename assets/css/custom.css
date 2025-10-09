@@ -218,19 +218,12 @@ body{
   text-align: center;
 }
 
-.birthstone-regular {
-  font-family: "Birthstone", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .quote{
-  font-family: "Birthstone", cursive;
-  font-weight: bold;
-  font-style: normal;
+  font-weight: normal;
+  font-style: italic;
   text-transform: unset !important;
-  font-size: 2.5em;
-  line-height: 1.2em;
+  font-size: 1.5em;
+  line-height: 1.5em;
   letter-spacing: 0 !important;
 }
 
