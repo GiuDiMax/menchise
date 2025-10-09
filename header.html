@@ -9,21 +9,40 @@
       <li class="special">
         <a href="#menu" class="menuToggle"><span>Menu</span></a>
         <div id="menu">
-          <ul>
+          <ul class="accordion-menu">
             <li><a href="/">Home</a></li>
-            <li><a href="/servizi#impiantidentali">Impianti dentali</a></li>
-            <li><a href="/servizi#intarsi">Intarsi</a></li>
-            <li><a href="/servizi">I nostri servizi</a></li>
-            <li><a href="/servizi#radiologia">Radiologia</a></li>
-            <li><a href="/servizi#igiene">Igiene e profilassi</a></li>
-            <li><a href="/servizi#chirurgia">Chirurgia</a></li>
-            <li><a href="/servizi#conservativadiretta">Conservativa diretta</a></li>
-            <li><a href="/servizi#conservativaindiretta">Conservativa indiretta</a></li>
-            <li><a href="/servizi#terapiacanalare">Terapia canalare</a></li>
-            <li><a href="/servizi#protesifissa">Protesi fissa</a></li>
-            <li><a href="/servizi#protesimobile">Protesi mobile</a></li>
-            <li><a href="/servizi#ortodonzia">Ortodonzia</a></li>
-            <li><a href="/servizi#parodontologia">Parodontologia</a></li>
+
+            <li class="has-submenu">
+              <a href="#" class="accordion-trigger" data-category="terapie">Terapie e Trattamenti</a>
+              <ul class="submenu">
+                <li><a href="/servizi#chirurgia">Chirurgia</a></li>
+                <li><a href="/servizi#conservativadiretta">Conservativa diretta</a></li>
+                <li><a href="/servizi#conservativaindiretta">Conservativa indiretta</a></li>
+                <li><a href="/servizi#terapiacanalare">Terapia canalare</a></li>
+                <li><a href="/servizi#parodontologia">Parodontologia</a></li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <a href="#" class="accordion-trigger" data-category="protesi">Protesi e Impianti</a>
+              <ul class="submenu">
+                <li><a href="/servizi#impiantidentali">Impianti dentali</a></li>
+                <li><a href="/servizi#intarsi">Intarsi</a></li>
+                <li><a href="/servizi#protesifissa">Protesi fissa</a></li>
+                <li><a href="/servizi#protesimobile">Protesi mobile</a></li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <a href="#" class="accordion-trigger" data-category="altri">Altri Servizi</a>
+              <ul class="submenu">
+                <li><a href="/servizi#radiologia">Radiologia</a></li>
+                <li><a href="/servizi#igiene">Igiene e profilassi</a></li>
+                <li><a href="/servizi#ortodonzia">Ortodonzia</a></li>
+              </ul>
+            </li>
+
+            <li><a href="/servizi">Tutti i servizi</a></li>
             <li><a href="/index#cta">Contattaci</a></li>
           </ul>
         </div>

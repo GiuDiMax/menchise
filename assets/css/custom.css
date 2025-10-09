@@ -68,14 +68,14 @@
     inset 0 25px 25px 8px rgba(2, 67, 109, 0.5);
 }*/
 
-.servizipage .spotlight:nth-child(odd) {
-  background-color: #046fb6 !important;
-  color: #b9c7e8;
+.servizipage .spotlight:nth-child(odd), .servizipage .spotlight:nth-child(odd) h2{
+  background-color: #b9c7e8 !important;
+  color: #046fb6;
 }
 
 .servizipage .spotlight:nth-child(even), .servizipage .spotlight:nth-child(even) h2{
-  background-color: #b9c7e8 !important;
-  color: #046fb6;
+  background-color: #799cd1 !important;
+  color: white;
 }
 
 
@@ -100,7 +100,7 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-  background-color: #799cd1;
+  background-color: #3f6fb8;
   box-shadow: none !important;
   color: #ffffff !important;
 }
@@ -110,7 +110,7 @@ input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-  background-color: #3f6fb8 !important;
+  background-color: #046fb6 !important;
 }
 
 input[type="submit"].primary:active,
@@ -122,7 +122,7 @@ button.primary:active,
 }
 
 body.landing #footer {
-  background-color: #335993 !important;
+  background-color: #046fb6 !important;
   color: #799cd1 !important;
   padding: 2em !important;
 }
@@ -146,4 +146,74 @@ body.landing #footer {
   width: 50vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+.spotlight .content h2{
+  scroll-margin-top: 2rem;
+}
+
+#menu .submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding-left: 15px;
+}
+
+#menu .has-submenu.active .submenu {
+  max-height: 50em;
+  transition: max-height 0.3s ease-in;
+}
+
+#menu .submenu{
+  margin:0 !important;
+}
+
+#menu .submenu > li:first-child {
+  margin-top: 0.5em !important;
+}
+
+#menu .submenu > li:last-child {
+  margin-bottom: 0.5em !important;
+}
+
+#menu .accordion-trigger:after {
+  content: '+';
+  float: right;
+  transition: transform 0.3s;
+}
+
+#menu .has-submenu.active .accordion-trigger:after {
+  content: '-';
+}
+
+.casiclinici h2, .casiclinici h3, .casiclinici p, .casiclinici .icon:before{
+  color:#046fb6 !important
+}
+
+.features li:nth-child(1) {
+  background-color: rgba(4, 111, 182, 0.035);
+}
+
+.features li:nth-child(2) {
+  background-color: rgba(4, 111, 182, 0.07);
+}
+
+.features li:nth-child(3) {
+  background-color: rgba(4, 111, 182, 0.105)
+}
+
+body{
+
+}
+
+#banner::after {
+  background: #046fb6 !important;
+}
+
+.staffimage{
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+  margin-top: 2em;
+  text-align: center;
 }
