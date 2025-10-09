@@ -1,7 +1,9 @@
-@media screen and (max-width: 480px) {
-  .scrolly{
-    display:none;
+@media screen and (max-width: 800px) {
+
+  .scrolly {
+    display: block !important;
   }
+
   .logo-container {
     height: 4em;
     display: flex;
@@ -10,9 +12,11 @@
     margin-top: 1em;
     margin-bottom: 1em;
   }
-  .menuToggle{
+
+  .menuToggle {
     margin-top: 0.8em;
   }
+
   .logo-container > a {
     height: 100%;
   }
@@ -26,49 +30,93 @@
     margin: 0;
   }
 
-  .mainPhotoContainer{
+  .mainPhotoContainer {
     width: auto;
     height: 30vh;
     aspect-ratio: 1;
-    margin:auto;
+    margin: auto;
     margin-bottom: 4em;
     margin-top: 2em;
   }
-  #banner{
+
+  #banner {
     height: 100vh;
   }
 
-  .forceMobile{
+  .forceMobile {
     display: unset !important;
   }
-  .hideMobile{
+
+  .hideMobile {
     display: none !important;
   }
 
 
-  .servizipage .spotlight .image{
+  .servizipage .spotlight .image {
     width: 100%;
   }
 
-  .titoloServizi{
-    margin-top: 5em;
+  .titoloServizi {
+    margin-top: 1.5rem;
   }
 
-  .staffimage{
+  .staffimage {
     width: 100% !important;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
   }
-  .staffimage img{
-    width: 90% !important;
-    margin-left:auto;
-    margin-right:auto;
+
+  .staffimage img {
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  #image-carousel{
+  #image-carousel {
     width: 100%;
   }
+
+  .googlemap {
+    height: 40vh !important;
+  }
+
+  .servizipage .spotlight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .servizipage .spotlight .image {
+    -ms-flex-order: 2;
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .servizipage .spotlight .image img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+  }
+
+  .servizipage .spotlight .content {
+    -ms-flex-order: 1;
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .spotlight .content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .spotlight .content ul{
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
 
 
 }
