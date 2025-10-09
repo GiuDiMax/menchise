@@ -1,9 +1,7 @@
 @media screen and (max-width: 800px) {
-
-  .scrolly {
-    display: block !important;
-  }
-
+  /*.scrolly {*/
+  /*  display: block !important;*/
+  /*}*/
   .logo-container {
     height: 4em;
     display: flex;
