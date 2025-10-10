@@ -234,12 +234,16 @@ body{
   text-decoration: underline;
 }
 
-.landing #header {
+#header{
+
+}
+
+.index.landing #header {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
 
-.is-preload #header {
+.index.is-preload #header {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }

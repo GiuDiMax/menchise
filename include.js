@@ -46,7 +46,7 @@ function initializeScripts() {
     'assets/js/util.js',
     'assets/js/main.js'
   ];
-
+  initializeAccordion()
   let promise = Promise.resolve();
   scriptsToLoad.forEach(src => {
     promise = promise.then(() => new Promise(resolve => {
@@ -56,8 +56,7 @@ function initializeScripts() {
       document.body.appendChild(script);
     }));
   });
-  setupPageHead()
-  initializeAccordion()
+  //setupPageHead()
 }
 
 includeHTML('header-container', 'header.html', initializeScripts);
