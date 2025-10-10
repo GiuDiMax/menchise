@@ -148,8 +148,8 @@ body.landing #footer {
   margin-right: auto;
 }
 
-.servizipage .spotlight{
-  scroll-margin-top: 5rem;
+.spotlight, h2{
+  scroll-margin-top: 8rem !important;
 }
 
 #menu .submenu {

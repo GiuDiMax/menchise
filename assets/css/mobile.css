@@ -115,5 +115,34 @@
   }
 
 
+  .spotlight, h2{
+    scroll-margin-top: 7rem !important;
+  }
+
+
+}
+
+
+@media screen and (max-height: 800px) {
+  /*.scrolly {*/
+  /*  display: none !important;*/
+  /*}*/
+
+  .mainPhotoContainer {
+    width: auto;
+    height: 30vh;
+    aspect-ratio: 1;
+    margin: auto;
+    margin-bottom: 2.5em;
+    margin-top: 3em;
+  }
+
+  #banner .more{
+    height: 6em;
+  }
+
+  #banner .more::after{
+    bottom: 2em;
+  }
 
 }

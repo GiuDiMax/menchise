@@ -12,6 +12,21 @@
 		$banner = $('#banner'),
 		$header = $('#header');
 
+  // Menu.
+  $('#menu')
+    .append('<a href="#menu" class="close"></a>')
+    .appendTo($body)
+    .panel({
+      delay: 250,
+      hideOnClick: true,
+      hideOnSwipe: true,
+      resetScroll: true,
+      resetForms: true,
+      side: 'right',
+      target: $body,
+      visibleClass: 'is-menu-visible'
+    });
+
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -43,26 +58,10 @@
 
 		}
 
-	// Scrolly.
 		$('.scrolly')
 			.scrolly({
 				speed: 1500,
 				offset: $header.outerHeight()
-			});
-
-	// Menu.
-		$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo($body)
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right',
-				target: $body,
-				visibleClass: 'is-menu-visible'
 			});
 
 	// Header.
