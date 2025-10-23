@@ -265,3 +265,53 @@ body{
 
 .is-preload{
 }
+
+.newpar {
+  hyphens: auto;
+  text-align: center;
+  background-color: white;
+  color: #046fb6;
+  padding-top: 7em;
+  padding-bottom: 5em;
+}
+
+.newpar h2{
+  color: #046fb6;
+  font-size: 1.5em;
+}
+
+.newpar h3{
+  color: #046fb6;
+  font-size: 1.3em;
+  text-transform: unset !important;
+  margin-top: 2em;
+  letter-spacing: 0 !important;
+}
+
+.newpar p{
+  hyphens: auto;
+  text-align: justify;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.newpar ul{
+  hyphens: auto;
+  text-align: left;
+  width: 75%;
+  margin: 2em auto 0 auto;
+}
+
+.newpar ul li{
+  margin: 1em auto 0 auto;
+}
+
+.newpar ul li strong{
+  color: #046fb6;
+}
+
+.newpar img{
+  max-width: 500px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

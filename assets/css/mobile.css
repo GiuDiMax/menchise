@@ -123,6 +123,14 @@
     scroll-margin-top: 6rem !important;
   }
 
+  .newpar img{
+    max-width: 60%;
+  }
+
+  .newpar {
+    padding-top: 9em;
+  }
+
 
 }
 
