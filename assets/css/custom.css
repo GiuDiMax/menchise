@@ -269,8 +269,8 @@ body{
 .newpar {
   hyphens: auto;
   text-align: center;
-  background-color: white;
-  color: #046fb6;
+  background-color: #dce3f3;
+  color: #035388;
   padding-top: 7em;
   padding-bottom: 5em;
 }
@@ -293,25 +293,28 @@ body{
   text-align: justify;
   width: 75%;
   margin: 0 auto;
+  font-weight: normal;
 }
 
-.newpar ul{
+.newpar ol, .newpar ul{
   hyphens: auto;
   text-align: left;
   width: 75%;
-  margin: 2em auto 0 auto;
+  margin: 2em auto 2em auto;
 }
 
-.newpar ul li{
+.newpar ol li, .newpar ul li{
   margin: 1em auto 0 auto;
 }
 
-.newpar ul li strong{
-  color: #046fb6;
+.newpar b, .newpar ol li b, .newpar ul li b{
+  color: #035388 !important;
+  font-weight: 600 !important;
 }
 
 .newpar img{
-  max-width: 500px;
+  width: 20em;
+  height: auto;
   margin-top: 2em;
   margin-bottom: 2em;
 }

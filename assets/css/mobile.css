@@ -131,6 +131,10 @@
     padding-top: 9em;
   }
 
+  .newpar p{
+    width: 90%;
+  }
+
 
 }
 
