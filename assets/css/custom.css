@@ -296,6 +296,14 @@ body{
   font-weight: normal;
 }
 
+.newpar li p {
+  width: 100%;
+}
+
+.newpar li ul{
+  width: 95%;
+}
+
 .newpar ol, .newpar ul{
   hyphens: auto;
   text-align: left;
