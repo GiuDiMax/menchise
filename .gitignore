@@ -1,6 +1,3 @@
-# build output
-dist/
-
 # generated types
 .astro/
 
@@ -22,9 +19,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-
-# backup folder
-old_html/
 
 # cache
 .cache
