@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # backup folder
 old_html/
+
+# cache
+.cache
