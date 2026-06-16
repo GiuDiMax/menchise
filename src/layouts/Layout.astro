@@ -1,23 +1,95 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+	bodyClass?: string;
+}
+
+const { 
+	title, 
+	description = "Centro Dentale Menchise a Bari. Affidati ai nostri specialisti per impianti, ortodonzia e salute dentale.", 
+	bodyClass = "is-preload" 
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="it">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || 'https://studiomenchise.it')} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL('/images/logo.webp', Astro.site || 'https://studiomenchise.it')} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL('/images/logo.webp', Astro.site || 'https://studiomenchise.it')} />
+
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/custom.css?v=2.0" />
+		<link rel="stylesheet" href="/assets/css/mobile.css?v=2.0" />
+		<noscript>
+			<link rel="stylesheet" href="/assets/css/noscript.css" />
+		</noscript>
+		
+		<!-- Additional head elements like Splide CSS can be injected here -->
+		<slot name="head" />
 	</head>
-	<body>
-		<slot />
+	<body class={bodyClass}>
+		<div id="page-wrapper">
+			<Header />
+			<slot />
+			<Footer />
+		</div>
+		
+		<!-- Scripts -->
+		<script is:inline src="/assets/js/jquery.min.js"></script>
+		<script is:inline src="/assets/js/jquery.scrollex.min.js"></script>
+		<script is:inline src="/assets/js/jquery.scrolly.min.js"></script>
+		<script is:inline src="/assets/js/browser.min.js"></script>
+		<script is:inline src="/assets/js/breakpoints.min.js"></script>
+		<script is:inline src="/assets/js/util.js"></script>
+		<script is:inline src="/assets/js/main.js"></script>
+		
+		<script is:inline>
+			// Initialize accordion from the old include.js
+			document.addEventListener('DOMContentLoaded', () => {
+				const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+				accordionTriggers.forEach(trigger => {
+					trigger.addEventListener('click', (e) => {
+						e.preventDefault();
+						const parentLi = trigger.closest('.has-submenu');
+						const isActive = parentLi.classList.contains('active');
+						document.querySelectorAll('.has-submenu.active').forEach(openLi => {
+							if (openLi !== parentLi) {
+								openLi.classList.remove('active');
+							}
+						});
+						if (isActive) {
+							parentLi.classList.remove('active');
+						} else {
+							parentLi.classList.add('active');
+						}
+					});
+				});
+			});
+		</script>
+		
+		<slot name="scripts" />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

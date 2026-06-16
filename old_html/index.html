@@ -1,17 +1,21 @@
----
-import Layout from '../layouts/Layout.astro';
----
-
-<Layout 
-  title="Centro Dentale Menchise | Studio Dentistico a Bari" 
-  description="Centro Dentale Menchise a Bari. Affidati ai nostri specialisti per impianti, ortodonzia e salute dentale. Prenota un appuntamento."
-  bodyClass="landing index"
->
-  <Fragment slot="head">
-    <script is:inline src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
-  </Fragment>
-
+<!DOCTYPE HTML>
+<html lang="it">
+<head>
+  <title>Centro Dentale Menchise</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/custom.css?v=2.0" />
+  <link rel="stylesheet" href="assets/css/mobile.css?v=2.0" />
+  <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+  <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+</head>
+<body class="landing is-preload index">
+<div id="page-wrapper">
+  <div id="header-container"></div>
   <section id="banner" style="background-color: #799cd1; background-image: unset !important;">
     <div class="inner">
       <div class="mainPhotoContainer">
@@ -39,19 +43,19 @@ import Layout from '../layouts/Layout.astro';
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
-            <img src="/images/main/DSC_8507.jpeg" alt="">
+            <img src="images/main/DSC_8507.jpeg" alt="">
           </li>
           <li class="splide__slide">
-            <img src="/images/main/Sala Arancio.jpeg" alt="">
+            <img src="images/main/Sala Arancio.jpeg" alt="">
           </li>
           <li class="splide__slide">
-            <img src="/images/main/Sala celeste.jpeg" alt="">
+            <img src="images/main/Sala celeste.jpeg" alt="">
           </li>
           <li class="splide__slide">
-            <img src="/images/main/DSC_8530.jpeg" alt="">
+            <img src="images/main/DSC_8530.jpeg" alt="">
           </li>
           <li class="splide__slide">
-            <img src="/images/main/2023-05-24.jpeg" alt="">
+            <img src="images/main/2023-05-24.jpeg" alt="">
           </li>
         </ul>
       </div>
@@ -62,7 +66,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="three" class="wrapper alt style2">
     <section class="spotlight" style="background-color: #799cd1;">
-      <div class="image hideMobile"><img src="/images/main/Sala celeste.jpeg" alt="" /></div>
+      <div class="image hideMobile"><img src="images/main/Sala celeste.jpeg" alt="" /></div>
       <div class="content">
         <h2>I nostri servizi</h2>
         <ul>
@@ -129,15 +133,26 @@ import Layout from '../layouts/Layout.astro';
       </iframe>
     </div>
     <div class="staffimage">
-      <img src="/images/telegram/6028399097641289176.jpg" alt="staff" style="margin-left:auto; margin-right:auto; width: 100%; height: auto;"/>
+      <img src="images/telegram/6028399097641289176.jpg" alt="staff" style="margin-left:auto; margin-right:auto; width: 100%; height: auto;"/>
     </div>
   </section>
+  <div id="footer-container"></div>
+</div>
 
-  <Fragment slot="scripts">
-    <script is:inline>
-      new Splide( '#image-carousel', {
-        type   : 'loop',
-      }).mount();
-    </script>
-  </Fragment>
-</Layout>
+<script src="include.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+  new Splide( '#image-carousel', {
+    type   : 'loop',
+  }).mount();
+</script>
+
+</body>
+</html>
