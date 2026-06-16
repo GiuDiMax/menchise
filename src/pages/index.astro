@@ -1,143 +1,207 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import { ImageCarousel } from "@/components/ImageCarousel"
 ---
 
 <Layout 
   title="Centro Dentale Menchise | Studio Dentistico a Bari" 
   description="Centro Dentale Menchise a Bari. Affidati ai nostri specialisti per impianti, ortodonzia e salute dentale. Prenota un appuntamento."
-  bodyClass="landing index"
+  bodyClass="landing index bg-background text-foreground"
 >
-  <Fragment slot="head">
-    <script is:inline src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
-  </Fragment>
 
-  <section id="banner" style="background-color: #799cd1; background-image: unset !important;">
-    <div class="inner">
-      <div class="mainPhotoContainer">
-        <img src="/images/main/1687983488158.jpeg" alt="dottor menchise" class="mainPhoto">
+  {/* Hero Section */}
+  <section id="banner" class="relative w-full py-16 md:py-24 overflow-hidden bg-background">
+    {/* Modern gradient background decorations */}
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-secondary/30 via-background to-background"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-primary/10 via-background to-transparent"></div>
+    
+    <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
+      
+      {/* Photo on the Left (Desktop) */}
+      <div class="relative w-56 h-56 md:w-[360px] md:h-[360px] shrink-0 group">
+        {/* Glow effect behind image */}
+        <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-700"></div>
+        {/* Actual Image */}
+        <div class="relative w-full h-full rounded-full overflow-hidden border-[6px] border-background shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+          <img src="/images/main/1687983488158.jpeg" alt="Dottor Menchise" class="object-cover w-full h-full" />
+        </div>
       </div>
-      <h2 style="font-size: 1.3em;">Centro Dentale Menchise</h2>
-      <p class="quote">"Da un sorriso nasce sempre un altro sorriso"
-        <br class="forceMobile" />
-        <span class="cit">[Charlie Chaplin]</span>
-      </p>
-    </div>
-    <a href="#two" class="more scrolly">Scopri di più</a>
-  </section>
-  <section id="two" class="wrapper style3 special" style="background: linear-gradient(rgba(51, 89, 147, 0.7), rgba(51, 89, 147, 0.7)), url('/images/main/bari.webp') center/cover no-repeat;">
-    <div class="inner" style="min-height: 15em;">
-      <header class="major" >
-        <h2 style="font-size: 1.3em; border-color: white; padding-top: 3em;">Il tuo centro dentale nel centro di Bari</h2>
-        <h4 style="font-size: 0.8em; margin-top:0.5em;">Vienici a trovare nella nostra sede in Via Nicolai 9</h4>
-      </header>
-    </div>
-  </section>
-  <section id="carousel" class="wrapper special" style="background-color:#b9c7e8; padding-top:2em; padding-bottom:2em;">
-    <h2 id="ambienti" style="font-size: 1.5em; color: #046fb6;margin-bottom:2em;">I nostri ambienti</h2>
-    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="/images/main/DSC_8507.jpeg" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="/images/main/Sala Arancio.jpeg" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="/images/main/Sala celeste.jpeg" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="/images/main/DSC_8530.jpeg" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="/images/main/2023-05-24.jpeg" alt="">
-          </li>
-        </ul>
+      
+      {/* Text on the Right (Desktop) */}
+      <div class="space-y-8 text-center md:text-left flex-1">
+        <div class="space-y-6">
+          <div class="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary shadow-sm backdrop-blur-sm">
+            <span class="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
+            Eccellenza Odontoiatrica a Bari
+          </div>
+          
+          <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-foreground">
+            Centro Dentale <br class="hidden md:block"/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Menchise</span>
+          </h1>
+          
+          <p class="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-xl mx-auto md:mx-0">
+            "Da un sorriso nasce sempre un altro sorriso"<br/>
+            <span class="text-sm font-medium mt-3 block text-foreground/40 tracking-widest uppercase">— Charlie Chaplin</span>
+          </p>
+        </div>
+        
+        <div class="pt-2 flex flex-col sm:flex-row gap-3 items-center justify-center md:justify-start">
+          <a href="#servizi">
+            <Button className="px-8 py-6 text-base md:text-lg bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-1">
+              Scopri i Servizi
+            </Button>
+          </a>
+          <a href="#cta">
+            <Button variant="outline" className="px-8 py-6 text-base md:text-lg border-primary/30 text-primary hover:border-primary hover:bg-primary/5 transition-all">
+              Contattaci
+            </Button>
+          </a>
+        </div>
       </div>
-    </section>
-    <ul class="actions special" style="margin-top: 2em;">
-      <li><a href="#cta" class="button primary">Fissa un appuntamento</a></li>
-    </ul>
-  </section>
-  <section id="three" class="wrapper alt style2">
-    <section class="spotlight" style="background-color: #799cd1;">
-      <div class="image hideMobile"><img src="/images/main/Sala celeste.jpeg" alt="" /></div>
-      <div class="content">
-        <h2>I nostri servizi</h2>
-        <ul>
-          <li>Igiene e profilassi</li>
-          <li>Chirurgia</li>
-          <li>Chirurgia implantare computerizzata</li>
-          <li>Conservativa diretta</li>
-          <li>Conservativa indiretta</li>
-          <li>Terapia canalare o devitalizzazioni</li>
-          <li>Protesi fissa</li>
-          <li>Protesi mobile</li>
-          <li>Ortodonzia</li>
-          <li>Parodontologia</li>
-        </ul>
-        <a href="/servizi" class="button secondary">Scopri di più</a>
-      </div>
-    </section>
-  </section>
-  <section id="four" class="wrapper style3 special casiclinici" style="background-color:#b9c7e8;">
-    <div class="inner">
-      <header class="major">
-        <h2>Casi Clinici</h2>
-        <p style="display:none">Qui una breve descrizione</p>
-      </header>
-      <ul class="features">
-        <li class="icon solid fa-tooth">
-          <a href="/impianti">
-            <h3>Impianti Dentali</h3>
-            <p style="display:none">Lorem ipsum.</p>
-          </a>
-        </li>
-        <li class="icon solid fa-teeth-open">
-          <a href="/intarsi">
-            <h3>Intarsi</h3>
-            <p style="display:none">Lorem ipsum.</p>
-          </a>
-        </li>
-        <li class="icon solid fa-teeth" style="width: 75%">
-          <a href="/malattiaparodontale">
-            <h3>Malattia Parodontale</h3>
-            <p style="display:none">Lorem ipsum.</p>
-          </a>
-        </li>
-        <li class="icon solid fa-clone" style="display:none">
-          <h3>Altro Caso</h3>
-          <p>Lorem ipsum.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section id="cta" class="wrapper style4" style="background-color: #799cd1; background-image: unset !important;">
-    <div class="inner">
-      <header>
-        <h2>Contattaci</h2>
-        <p>Vienici a trovare nella nostra sede<br class="forceMobile" /> in<strong> Via Nicolai 9</strong>, 70122 Bari BA</p>
-      </header>
-      <ul class="actions stacked">
-        <li><a href="tel:0805210939" class="button fit primary">Chiamaci</a></li>
-        <li><a href="mailto:info@studiomenchise.it" class="button fit">Scrivici</a></li>
-      </ul>
-    </div>
-    <div class="staffimage" style="width: 50%">
-      <iframe class="googlemap" style="margin-left:auto; margin-right:auto;" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Via%20Domenico%20Nicolai,%209,%2070122%20Bari%20BA+(Centro%20Dentale%20Menchise)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/it/calcola-la-popolazione-su-una-mappa/">popolazione comuni Italia mappa interattiva</a>
-      </iframe>
-    </div>
-    <div class="staffimage">
-      <img src="/images/telegram/6028399097641289176.jpg" alt="staff" style="margin-left:auto; margin-right:auto; width: 100%; height: auto;"/>
+      
     </div>
   </section>
 
-  <Fragment slot="scripts">
-    <script is:inline>
-      new Splide( '#image-carousel', {
-        type   : 'loop',
-      }).mount();
-    </script>
-  </Fragment>
+  {/* Location Section */}
+  <section id="two" class="relative w-full py-32 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/main/bari.webp');">
+    <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-background/40 backdrop-blur-[2px]"></div>
+    <div class="relative z-10 max-w-5xl mx-auto text-center px-4 space-y-8">
+      <div class="inline-flex items-center rounded-full border border-primary/20 bg-background/80 px-4 py-1.5 text-sm font-medium text-primary shadow-sm backdrop-blur-md">
+        <i class="fa-solid fa-location-dot mr-2"></i> Dove siamo
+      </div>
+      <h2 class="text-4xl md:text-6xl font-extrabold text-foreground drop-shadow-sm">Il tuo centro dentale<br/>nel centro di Bari</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      <p class="text-xl md:text-2xl font-medium text-foreground/90 drop-shadow-md">Vienici a trovare nella nostra sede in Via Nicolai 9</p>
+    </div>
+  </section>
+
+  {/* Carousel Section */}
+  <section id="ambienti" class="relative w-full py-24 bg-muted/30 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+    <div class="max-w-6xl mx-auto px-4 text-center space-y-12 relative z-10">
+      <div class="space-y-6">
+        <div class="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary shadow-sm backdrop-blur-sm">
+          Il nostro Studio
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Ambienti moderni e accoglienti</h2>
+        <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+      </div>
+      
+      <div class="max-w-4xl mx-auto px-12">
+        <ImageCarousel client:load />
+      </div>
+
+      <div class="pt-8">
+        <a href="#cta">
+          <Button size="lg" variant="outline" className="px-8 py-6 text-lg border-primary/30 text-primary hover:border-primary hover:bg-primary/5 shadow-sm transition-all">
+            Fissa un appuntamento
+          </Button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Unified Services Grid Section */}
+  <section id="servizi" class="relative w-full py-24 bg-background overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary/10 via-background to-background"></div>
+    <div class="max-w-6xl mx-auto px-4 space-y-16 relative z-10">
+      <div class="text-center space-y-6">
+        <div class="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary shadow-sm backdrop-blur-sm">
+          Specializzazioni
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">I Nostri Servizi</h2>
+        <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+        <p class="text-xl text-muted-foreground pt-4 max-w-2xl mx-auto font-light">
+          Scopri tutti i trattamenti e i casi clinici offerti dal nostro studio per prenderti cura del tuo sorriso.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { href: "/radiologia", icon: "fa-x-ray", title: "Radiologia" },
+          { href: "/igiene", icon: "fa-tooth", title: "Igiene e Profilassi" },
+          { href: "/chirurgia", icon: "fa-syringe", title: "Chirurgia" },
+          { href: "/conservativa-diretta", icon: "fa-tooth", title: "Conservativa Diretta" },
+          { href: "/conservativa-indiretta", icon: "fa-teeth-open", title: "Conservativa Indiretta" },
+          { href: "/terapia-canalare", icon: "fa-tooth", title: "Terapia Canalare" },
+          { href: "/protesi-fissa", icon: "fa-teeth", title: "Protesi Fissa" },
+          { href: "/protesi-mobile", icon: "fa-teeth", title: "Protesi Mobile" },
+          { href: "/ortodonzia", icon: "fa-teeth-open", title: "Ortodonzia" },
+          { href: "/parodontologia", icon: "fa-tooth", title: "Parodontologia" },
+          { href: "/impianti", icon: "fa-tooth", title: "Impianti" },
+          { href: "/intarsi", icon: "fa-teeth-open", title: "Intarsi" }
+        ].map((item) => (
+          <a href={item.href} class="block group relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Card className="relative h-full border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 group-hover:-translate-y-2 cursor-pointer shadow-sm group-hover:shadow-xl">
+              <CardHeader className="text-center space-y-4">
+                <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 shadow-inner transition-all duration-300">
+                  <i class={`fa-solid ${item.icon} text-2xl`}></i>
+                </div>
+                <CardTitle class="text-xl font-bold group-hover:text-primary transition-colors">{item.title}</CardTitle>
+              </CardHeader>
+            </Card>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* CTA & Contact Section */}
+  <section id="cta" class="relative w-full bg-secondary/10 py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
+    <div class="max-w-6xl mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+      
+      <div class="space-y-8 text-center md:text-left bg-card/60 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-border/50 shadow-xl">
+        <div class="space-y-6">
+          <div class="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary shadow-sm">
+            Prenota ora
+          </div>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Contattaci</h2>
+          <div class="w-24 h-1 bg-primary mx-auto md:mx-0 rounded-full"></div>
+          <p class="text-xl text-muted-foreground pt-2 font-light">
+            Vienici a trovare nella nostra sede in<br/>
+            <strong class="text-foreground font-semibold">Via Nicolai 9</strong>, 70122 Bari BA
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center md:justify-start pt-4">
+          <a href="tel:0805210939">
+            <Button size="lg" className="px-8 py-6 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:-translate-y-1 transition-transform">
+              <i class="fa-solid fa-phone mr-2"></i> Chiamaci
+            </Button>
+          </a>
+          <a href="https://wa.me/393474013371" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="px-8 py-6 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:-translate-y-1 transition-transform">
+              <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> WhatsApp
+            </Button>
+          </a>
+          <a href="mailto:info@studiomenchise.it">
+            <Button size="lg" variant="outline" className="px-8 py-6 text-lg border-primary/30 text-primary hover:border-primary hover:bg-primary/5 shadow-sm hover:-translate-y-1 transition-transform">
+              <i class="fa-solid fa-envelope mr-2"></i> Scrivici
+            </Button>
+          </a>
+        </div>
+      </div>
+      
+      <div class="space-y-8 relative">
+        <div class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-[2.5rem] blur-2xl opacity-50"></div>
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-[4px] border-background h-[300px] group">
+          <iframe 
+            class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700" 
+            frameborder="0" 
+            scrolling="no" 
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Via%20Domenico%20Nicolai,%209,%2070122%20Bari%20BA+(Centro%20Dentale%20Menchise)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+          </iframe>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-[4px] border-background">
+          <img src="/images/telegram/telegram-26.webp" alt="Il nostro staff" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"/>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
 </Layout>

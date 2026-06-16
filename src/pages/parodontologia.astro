@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Parodontologia - Centro Dentale Menchise" 
+  description="Diagnosi e cura della malattia parodontale (gengivite e parodontite) al Centro Dentale Menchise a Bari."
+  bodyClass="bg-background text-foreground"
+>
+  <section class="w-full bg-secondary/20 py-20 px-4 text-center">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-primary">Parodontologia</h1>
+      <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto py-16 px-4 space-y-12">
+    
+    <div class="rounded-2xl overflow-hidden shadow-xl border border-border/50 my-8 max-w-lg mx-auto">
+      <img src="/images/parodontale/0.png" alt="Malattia parodontale" class="w-full h-auto object-cover" />
+    </div>
+
+    <div class="space-y-6 text-lg text-muted-foreground leading-relaxed">
+      <h2 class="text-3xl font-bold text-foreground">La malattia parodontale</h2>
+      <p>La malattia parodontale è un’infezione batterica multifattoriale e sitospecifica che colpisce i tessuti di sostegno del dente.</p>
+      
+      <ul class="list-disc list-inside space-y-4 marker:text-primary pl-4">
+        <li><b>Batterica: </b>la causa principale e necessaria è la presenza di placca batterica.</li>
+        <li><b>Multifattoriale: </b>fattori come fumo, malattie sistemiche e malocclusioni dentarie possono favorirne l’insorgenza o aggravare i danni causati dai batteri.</li>
+        <li><b>Sitospecifica: </b>può colpire in modo diverso ogni dente o anche singole zone dello stesso, rendendo necessaria una diagnosi individuale dente per dente.</li>
+      </ul>
+    </div>
+
+    <div class="rounded-2xl overflow-hidden shadow-xl border border-border/50 my-8 max-w-lg mx-auto">
+      <img src="/images/parodontale/1.png" alt="Sviluppo malattia" class="w-full h-auto object-cover" />
+    </div>
+
+    <div class="space-y-6 text-lg text-muted-foreground leading-relaxed">
+      <p>La malattia può manifestarsi come:</p>
+      <ul class="list-disc list-inside space-y-4 marker:text-primary pl-4">
+        <li><b>Gengivite: </b>infiammazione reversibile con completa guarigione dei tessuti (“restitutio ad integrum”).</li>
+        <li><b>Parodontite: </b>distruzione irreversibile dei tessuti di sostegno, anche dopo guarigione.</li>
+      </ul>
+
+      <p class="mt-8">I principali tipi di parodontite sono:</p>
+      <ol class="list-decimal list-inside space-y-2 marker:text-primary marker:font-bold pl-4">
+        <li>Cronica</li>
+        <li>Aggressiva</li>
+        <li>Associata a malattie sistemiche</li>
+        <li>Necrotizzante</li>
+      </ol>
+    </div>
+
+    <div class="rounded-2xl overflow-hidden shadow-xl border border-border/50 my-8 max-w-lg mx-auto">
+      <img src="/images/parodontale/2.png" alt="Tipi di parodontite" class="w-full h-auto object-cover" />
+    </div>
+
+  </article>
+</Layout>

@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 
 interface Props {
 	title: string;
@@ -11,7 +12,7 @@ interface Props {
 const { 
 	title, 
 	description = "Centro Dentale Menchise a Bari. Affidati ai nostri specialisti per impianti, ortodonzia e salute dentale.", 
-	bodyClass = "is-preload" 
+	bodyClass = "" 
 } = Astro.props;
 ---
 
@@ -24,14 +25,12 @@ const {
 		<meta name="description" content={description} />
 		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || 'https://studiomenchise.it')} />
 
-		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={new URL('/images/logo.webp', Astro.site || 'https://studiomenchise.it')} />
 
-		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={Astro.url} />
 		<meta property="twitter:title" content={title} />
@@ -39,56 +38,16 @@ const {
 		<meta property="twitter:image" content={new URL('/images/logo.webp', Astro.site || 'https://studiomenchise.it')} />
 
 		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 		
-		<link rel="stylesheet" href="/assets/css/main.css" />
-		<link rel="stylesheet" href="/assets/css/custom.css?v=2.0" />
-		<link rel="stylesheet" href="/assets/css/mobile.css?v=2.0" />
-		<noscript>
-			<link rel="stylesheet" href="/assets/css/noscript.css" />
-		</noscript>
-		
-		<!-- Additional head elements like Splide CSS can be injected here -->
 		<slot name="head" />
 	</head>
-	<body class={bodyClass}>
-		<div id="page-wrapper">
-			<Header />
+	<body class={`${bodyClass} min-h-screen flex flex-col bg-background text-foreground scroll-smooth`}>
+		<Header />
+		<main class="flex-grow">
 			<slot />
-			<Footer />
-		</div>
-		
-		<!-- Scripts -->
-		<script is:inline src="/assets/js/jquery.min.js"></script>
-		<script is:inline src="/assets/js/jquery.scrollex.min.js"></script>
-		<script is:inline src="/assets/js/jquery.scrolly.min.js"></script>
-		<script is:inline src="/assets/js/browser.min.js"></script>
-		<script is:inline src="/assets/js/breakpoints.min.js"></script>
-		<script is:inline src="/assets/js/util.js"></script>
-		<script is:inline src="/assets/js/main.js"></script>
-		
-		<script is:inline>
-			// Initialize accordion from the old include.js
-			document.addEventListener('DOMContentLoaded', () => {
-				const accordionTriggers = document.querySelectorAll('.accordion-trigger');
-				accordionTriggers.forEach(trigger => {
-					trigger.addEventListener('click', (e) => {
-						e.preventDefault();
-						const parentLi = trigger.closest('.has-submenu');
-						const isActive = parentLi.classList.contains('active');
-						document.querySelectorAll('.has-submenu.active').forEach(openLi => {
-							if (openLi !== parentLi) {
-								openLi.classList.remove('active');
-							}
-						});
-						if (isActive) {
-							parentLi.classList.remove('active');
-						} else {
-							parentLi.classList.add('active');
-						}
-					});
-				});
-			});
-		</script>
+		</main>
+		<Footer />
 		
 		<slot name="scripts" />
 	</body>

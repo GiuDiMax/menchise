@@ -1,15 +1,28 @@
 ---
 // Footer.astro
 ---
-<footer id="footer">
-  <ul class="icons">
-    <li style="display:none;"><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-    <li><a href="https://www.facebook.com/studio.menchise" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-    <li><a href="https://www.instagram.com/studiomenchiseofficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-    <li style="display:none;"><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-    <li><a href="mailto:info@studiomenchise.it" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-  </ul>
-  <ul class="copyright">
-    <li>&copy; Centro Dentale Menchise 2025</li>
-  </ul>
+<footer class="border-t border-border/40 bg-muted/20 py-8 mt-auto">
+  <div class="container max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex gap-4">
+      <a href="https://www.facebook.com/studio.menchise" class="w-10 h-10 rounded-full bg-secondary text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span class="sr-only">Facebook</span>
+      </a>
+      <a href="https://www.instagram.com/studiomenchiseofficial/" class="w-10 h-10 rounded-full bg-secondary text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="sr-only">Instagram</span>
+      </a>
+      <a href="https://wa.me/393474013371" class="w-10 h-10 rounded-full bg-secondary text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span class="sr-only">WhatsApp</span>
+      </a>
+      <a href="mailto:info@studiomenchise.it" class="w-10 h-10 rounded-full bg-secondary text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors">
+        <i class="fa-solid fa-envelope"></i>
+        <span class="sr-only">Email</span>
+      </a>
+    </div>
+    <div class="text-sm text-muted-foreground text-center md:text-right">
+      &copy; {new Date().getFullYear()} Centro Dentale Menchise. Tutti i diritti riservati.
+    </div>
+  </div>
 </footer>
