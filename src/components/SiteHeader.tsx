@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/accordion"
 
 export function SiteHeader() {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 max-w-6xl mx-auto items-center justify-between px-4">
@@ -85,7 +86,7 @@ export function SiteHeader() {
 
         {/* Mobile Nav - Shadcn Sheet & Accordion */}
         <div className="md:hidden flex items-center">
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 w-10 text-foreground">
               <i className="fa-solid fa-bars text-2xl"></i>
               <span className="sr-only">Toggle Menu</span>
@@ -99,14 +100,14 @@ export function SiteHeader() {
               </SheetHeader>
               
               <div className="flex-1 flex flex-col gap-4">
-                <a href="/" className="flex items-center gap-4 text-xl font-bold text-foreground hover:text-primary transition-colors p-2 rounded-2xl hover:bg-primary/5">
+                <a href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-4 text-xl font-bold text-foreground hover:text-primary transition-colors p-2 rounded-2xl hover:bg-primary/5">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shadow-inner shrink-0">
                     <i className="fa-solid fa-house"></i>
                   </div>
                   Home
                 </a>
                 
-                <a href="/#ambienti" className="flex items-center gap-4 text-xl font-bold text-foreground hover:text-primary transition-colors p-2 rounded-2xl hover:bg-primary/5">
+                <a href="/#ambienti" onClick={() => setIsOpen(false)} className="flex items-center gap-4 text-xl font-bold text-foreground hover:text-primary transition-colors p-2 rounded-2xl hover:bg-primary/5">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shadow-inner shrink-0">
                     <i className="fa-solid fa-couch"></i>
                   </div>
@@ -124,25 +125,25 @@ export function SiteHeader() {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="pt-4 pb-2 px-2">
-                      <div className="grid grid-cols-1 gap-2 pl-[3.25rem] border-l-2 border-primary/20 ml-[1.5rem]">
-                        <a href="/radiologia" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Radiologia</a>
-                        <a href="/igiene" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Igiene e Profilassi</a>
-                        <a href="/chirurgia" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Chirurgia</a>
-                        <a href="/conservativa-diretta" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Conservativa Diretta</a>
-                        <a href="/conservativa-indiretta" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Conservativa Indiretta</a>
-                        <a href="/terapia-canalare" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Terapia Canalare</a>
-                        <a href="/protesi-fissa" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Protesi Fissa</a>
-                        <a href="/protesi-mobile" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Protesi Mobile</a>
-                        <a href="/ortodonzia" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Ortodonzia</a>
-                        <a href="/parodontologia" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Parodontologia</a>
-                        <a href="/impianti" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Impianti</a>
-                        <a href="/intarsi" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Intarsi</a>
+                      <div className="grid grid-cols-1 gap-2 pl-4 ml-4">
+                        <a href="/radiologia" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Radiologia</a>
+                        <a href="/igiene" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Igiene e Profilassi</a>
+                        <a href="/chirurgia" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Chirurgia</a>
+                        <a href="/conservativa-diretta" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Conservativa Diretta</a>
+                        <a href="/conservativa-indiretta" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Conservativa Indiretta</a>
+                        <a href="/terapia-canalare" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Terapia Canalare</a>
+                        <a href="/protesi-fissa" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Protesi Fissa</a>
+                        <a href="/protesi-mobile" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Protesi Mobile</a>
+                        <a href="/ortodonzia" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Ortodonzia</a>
+                        <a href="/parodontologia" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Parodontologia</a>
+                        <a href="/impianti" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Impianti</a>
+                        <a href="/intarsi" onClick={() => setIsOpen(false)} className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-primary/50"></i> Intarsi</a>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
                 
-                <a href="/#cta" className="flex items-center gap-4 text-xl font-bold text-foreground hover:text-primary transition-colors p-2 rounded-2xl hover:bg-primary/5">
+                <a href="/#cta" onClick={() => setIsOpen(false)} className="flex items-center gap-4 text-xl font-bold text-foreground hover:text-primary transition-colors p-2 rounded-2xl hover:bg-primary/5">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shadow-inner shrink-0">
                     <i className="fa-solid fa-envelope"></i>
                   </div>
