@@ -7,27 +7,27 @@ export function ImageCarousel() {
       <CarouselContent>
         <CarouselItem>
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-            <img src="/images/main/DSC_8507.jpeg" className="w-full h-[300px] md:h-[500px] object-cover" alt="Ambiente 1" />
+            <img src="/images/main/DSC_8507.webp" className="w-full h-[300px] md:h-[500px] object-cover" width="3280" height="2464" loading="lazy" alt="Ambiente 1" />
           </div>
         </CarouselItem>
         <CarouselItem>
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-            <img src="/images/main/Sala Arancio.jpeg" className="w-full h-[300px] md:h-[500px] object-cover" alt="Sala Arancio" />
+            <img src="/images/main/Sala Arancio.webp" className="w-full h-[300px] md:h-[500px] object-cover" width="3280" height="2464" loading="lazy" alt="Sala Arancio" />
           </div>
         </CarouselItem>
         <CarouselItem>
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-            <img src="/images/main/Sala celeste.jpeg" className="w-full h-[300px] md:h-[500px] object-cover" alt="Sala Celeste" />
+            <img src="/images/main/Sala celeste.webp" className="w-full h-[300px] md:h-[500px] object-cover" width="3280" height="2464" loading="lazy" alt="Sala Celeste" />
           </div>
         </CarouselItem>
         <CarouselItem>
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-            <img src="/images/main/DSC_8530.jpeg" className="w-full h-[300px] md:h-[500px] object-cover" alt="Ambiente 4" />
+            <img src="/images/main/DSC_8530.webp" className="w-full h-[300px] md:h-[500px] object-cover" width="3280" height="2464" loading="lazy" alt="Ambiente 4" />
           </div>
         </CarouselItem>
         <CarouselItem>
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-            <img src="/images/main/2023-05-24.jpeg" className="w-full h-[300px] md:h-[500px] object-cover" alt="Ambiente 5" />
+            <img src="/images/main/2023-05-24.webp" className="w-full h-[300px] md:h-[500px] object-cover" width="1600" height="1200" loading="lazy" alt="Ambiente 5" />
           </div>
         </CarouselItem>
       </CarouselContent>
