@@ -10,6 +10,11 @@ import { ImageCarousel } from "@/components/ImageCarousel"
   description="Centro Dentale Menchise a Bari. Affidati ai nostri specialisti per impianti, ortodonzia e salute dentale. Prenota un appuntamento."
   bodyClass="landing index bg-background text-foreground"
 >
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/images/main/1687983488158.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/main/bari.webp" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  </Fragment>
 
   {/* Hero Section */}
   <section id="banner" class="relative w-full py-16 md:py-24 overflow-hidden bg-background">
