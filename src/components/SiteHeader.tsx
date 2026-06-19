@@ -34,7 +34,7 @@ export function SiteHeader() {
         {/* Logo */}
         <div className="flex gap-6 md:gap-10">
           <a href="/" className="flex items-center space-x-2">
-            <img src="/images/logo.webp" alt="Studio Menchise" className="h-12 w-auto" />
+            <img src="/images/logo.webp" alt="Studio Menchise" className="h-12 w-auto" width="200" height="48" />
           </a>
         </div>
         
@@ -95,7 +95,7 @@ export function SiteHeader() {
               
               <SheetHeader className="pb-6 border-b border-border/10 mb-6">
                 <div className="flex justify-start">
-                   <img src="/images/logo.webp" alt="Studio Menchise" className="h-10 w-auto" />
+                   <img src="/images/logo.webp" alt="Studio Menchise" className="h-10 w-auto" width="166" height="40" />
                 </div>
               </SheetHeader>
               
