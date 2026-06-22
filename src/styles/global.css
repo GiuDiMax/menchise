@@ -55,18 +55,18 @@
     --card-foreground: #0f172a;
     --popover: #ffffff;
     --popover-foreground: #0f172a;
-    --primary: #1972ba;
+    --primary: #046fb6;
     --primary-foreground: #ffffff;
-    --secondary: #8ba5d5;
-    --secondary-foreground: #0f172a;
+    --secondary: #799cd1;
+    --secondary-foreground: #ffffff;
     --muted: #f1f5f9;
     --muted-foreground: #6c6c6c;
-    --accent: #c8d1ec;
-    --accent-foreground: #1d75bb;
+    --accent: #b9c7e8;
+    --accent-foreground: #046fb6;
     --destructive: #ef4444;
     --border: #e2e8f0;
     --input: #e2e8f0;
-    --ring: #1972ba;
+    --ring: #046fb6;
     --radius: 0.625rem;
 }
 
